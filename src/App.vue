@@ -17,7 +17,7 @@
 </script>
 
 <style>
-  body {
+body {
     padding: 0;
     margin: 0;
   }
@@ -26,5 +26,19 @@
   }
   .page-enter, .page-leave-to {
     opacity: 0;
+  }
+
+  a {
+    color: #34495e;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #42b883;
+    text-decoration: underline;
+  }
+
+  a.router-link-exact-active {
+    text-decoration: underline; 
   }
 </style>
