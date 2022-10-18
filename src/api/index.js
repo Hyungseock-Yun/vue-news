@@ -14,12 +14,20 @@ function fetchJobsList() {
     return axios.get(`${config.baseUrl}jobs/1.json`);
 }
 
-function fetchAskList() {
-    return axios.get(`${config.baseUrl}ask/1.json`);
+async function fetchAskList() {
+    try {
+        return await axios.get(`${config.baseUrl}ask/1.json`);   
+    } catch (error) {
+        console.log(error);
+    }
 }
 
-function fetchList(pageName) {
-    return axios.get(`${config.baseUrl}${pageName}/1.json`);
+async function fetchList(pageName) {
+    try {
+        return axios.get(`${config.baseUrl}${pageName}/1.json`);   
+    } catch (error) {
+        console.log(error);
+    }
 }
 
 function fetchUserInfo(userName) {
